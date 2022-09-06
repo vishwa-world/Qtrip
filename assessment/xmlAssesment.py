@@ -1,4 +1,4 @@
-# import lxml.etree
+import lxml.etree
 import os
 import sys
 import json
