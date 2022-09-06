@@ -59,5 +59,15 @@ if __name__ == "__main__":
     xmlFile = sys.argv[2]#"testng-results.xml"
     resultsXml = getResultXml(xmlFile)
     results = runAssesments(jsonFile, resultsXml)
-    print(str(results))
-    json.dump(results,open("assesmentResults.json",'w+'))
+    print(json.dumps(results, indent=2))
+
+    # Store results in required format
+    # json.dump(results,open("assesmentResults.json",'w+'))
+    final_output={}
+    for instruction in results:
+        if instruction['status'] == "FAIL":
+           final_output[instruction['description']]="TEST_STATUS_FAILURE"
+        else:
+            final_output[instruction['description']]="TEST_STATUS_SUCCESS"
+
+    json.dump(final_output,open("assesmentResults.json",'w+'))
