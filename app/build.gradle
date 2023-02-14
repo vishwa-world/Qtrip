@@ -26,6 +26,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
     implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '5.2.2'
+
+    
+    implementation 'com.relevantcodes:extentreports:2.40.2'
     
 }
 
@@ -42,6 +45,7 @@ test.dependsOn startScript
 
 test {
     useTestNG() {
+        suites "src/test/java/qtriptest/testng.xml"
         useDefaultListeners = true // generates the test report
     }
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Tests for QTrip Regression">
+  <test name="LoginFlow">
+	 <classes>
+	   <class name="qtriptest.tests.testCase_01"/>
+	 </classes>
+   </test>
+   <test name="SearchFlow">
+     <classes>
+       <class name="qtriptest.tests.testCase_02"/>
+     </classes>
+   </test> 
+   <test name="BookingFlow">
+        <classes>
+            <class name="qtriptest.tests.testCase_03"/>
+        </classes>
+    </test>
+    <test name="ReliabilityFlow">
+        <classes>
+            <class name="qtriptest.tests.testCase_04"/>
+        </classes>
+    </test>
+</suite> 
+
+<!-- Note: Even below configuration is sufficient -->
+<!--    <test name = "Test Execution using testNG" verbose="2">-->
+<!--        <packages>-->
+<!--            <package name="qtriptest.tests"></package>-->
+<!--        </packages>-->
+<!--    </test>-->
